@@ -1,0 +1,13 @@
+<div class="delelteModal">
+    <div class="modalHeader">
+        <button id="close_btn" type="button" class="btn btn-danger" (click)="closeModal()">X</button>
+    </div>
+    <div class="modalBody">
+        <div class="title">Supprimer</div>
+        <p>Coulez vous vraiment supprimer l'etudiant {{etudiantData.nom}}</p>
+    </div>
+    <div class="modalFooter">
+        <button id="close_btn" type="button" class="btn btn-danger" (click)="deleteEtudiant(etudiantData.id)">Oui</button>
+        <button id="close_btn" type="button" class="btn" (click)="closeModal()">Non</button>
+    </div>
+</div>

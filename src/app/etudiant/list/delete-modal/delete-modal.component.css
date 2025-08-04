@@ -1,0 +1,20 @@
+.modalHeader{
+    float: right;
+    margin-right: 10px;
+}
+
+
+.title{
+    font-weight: bolder;
+    font-size: large;
+    margin: 20px;
+}
+
+p{
+    margin: 10px;
+}
+
+.modalFooter{
+    margin: 20px;
+    float: right;
+}

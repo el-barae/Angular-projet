@@ -1,0 +1,8 @@
+button{
+    float: right;
+}
+
+.actionIcon{
+    width: 24px;
+    cursor: pointer;
+}

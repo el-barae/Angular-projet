@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Âge</th>
+          <th>Supprimer</th>
+          <th>Modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let etudiant of etudiants()">
+          <td>{{ etudiant.id }}</td>
+          <td>{{ etudiant.nom }}</td>
+          <td>{{ etudiant.prenom }}</td>
+          <td>{{ etudiant.age }}</td>
+          <td><img src="assets/delelte.png" alt="delete" class="actionIcon" (click)="openDeleteModal(etudiant)"></td>
+          <td><img src="assets/update.png" alt="update" class="actionIcon" (click)="updateEtudiant(etudiant)"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
