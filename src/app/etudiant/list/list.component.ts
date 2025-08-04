@@ -16,7 +16,7 @@ interface Etudiant{
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule,DeleteModalComponent],
+  imports: [CommonModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })

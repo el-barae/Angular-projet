@@ -29,9 +29,11 @@ export class FormComponent {
     });
   }
 
-  ngOnInit(){
-    if(this.Action=="Modifier")
-    this.formEtudiant.setValue(this.etudiantData)
+  ngOnInit() {
+    if (this.Action === "Modifier") {
+      const { id, ...etudiantWithoutId } = this.etudiantData;
+      this.formEtudiant.setValue(etudiantWithoutId);
+    }
   }
 
   addEtudiant() {
@@ -41,12 +43,12 @@ export class FormComponent {
     }
   }
 
-  action(){
-    if(this.Action=="Ajouter"){
-      this.addEtudiant()
-    }
-    else{
-      this.updateEtudiant(this.etudiantData)
+  action() {
+    if (this.Action === "Ajouter") {
+      this.addEtudiant();
+    } else {
+      const updatedEtudiant = { ...this.etudiantData, ...this.formEtudiant.value };
+      this.updateEtudiant(updatedEtudiant);
     }
   }
 
